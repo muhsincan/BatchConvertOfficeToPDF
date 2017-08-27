@@ -37,7 +37,6 @@ $objExcel.Quit()
 $ppFormatPDF = 2
  $ppQualityStandard = 0
  $p = new-object -comobject powerpoint.application
- $p.visible = $false
 $p.visible = [Microsoft.Office.Core.MsoTriState]::msoTrue
  $ppFiletypes = "*.pptx","*ppt"
  $ppFiles = Get-ChildItem -path $folderpath -include $ppFiletypes -Recurse
